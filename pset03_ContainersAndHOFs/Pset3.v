@@ -273,14 +273,14 @@ Module Impl.
   Fixpoint merge {A} (t1 t2 : bitwise_trie A) : bitwise_trie A. Admitted.    
   
 
-  Lemma merge_test1 :
+  Lemma merge_example1 :
     merge (Node Leaf (Some 1) Leaf) (Node Leaf (Some 2) Leaf) =
     Node Leaf (Some 1) Leaf.
   Proof. Admitted.
-  Lemma merge_test2 :
+  Lemma merge_example2 :
     merge Leaf (Node Leaf (@None nat) Leaf) = Node Leaf None Leaf.
   Proof. Admitted.
-  Lemma merge_test3 :
+  Lemma merge_example3 :
     merge (Node Leaf None Leaf) (Node Leaf (Some 2) Leaf) =
     Node Leaf (Some 2) Leaf.
   Proof. Admitted.
