@@ -714,7 +714,7 @@ HINT 7: Proving bst_implies
 The following lemma is one way to prove bst_implies:
 
 Lemma tree_forall_implies:
-  forall tr (P Q: nat -> Prop),
+  forall tr (P Q: Z -> Prop),
     tree_forall P tr ->
     (forall x, P x -> Q x) ->
     tree_forall Q tr.
