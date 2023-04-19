@@ -464,9 +464,9 @@ Qed.
  *)
 Ltac check_type_of desc e t :=
   let t' := type of e in
-  (unify t' t + fail 0 desc e
-                  "should have the type" t
-                  "but instead has the type" t').
+  (tryif unify t' t then idtac else fail 0 desc e
+                                      "should have the type" t
+                                      "but instead has the type" t').
 
 (* This tactic is just for the purposes of error messages,
    it does nothing if it succeeds
